@@ -1,6 +1,7 @@
 # standard imports
 import pygame
 from pygame.locals import *
+import assets
 
 # Game Initialization
 pygame.init()
@@ -8,53 +9,14 @@ pygame.display.set_caption('rouge-like')
 screen = pygame.display.set_mode((640,480))
 
 # Game Variables
-vec = pygame.math.Vector2py
+vec = pygame.math.Vector2
 ACC = 0.5
 FRIC = -0.12
 frame_per_second = pygame.time.Clock()
 
-# Titleset Definitions
-
-    # Characters
-knight = (64, 576, 32, 32)
-mage = (32, 576, 32, 32)
-rouge = (0, 576, 32, 32)
-hunter = (128, 576, 32, 32)
-
-    # Transparent Tiles
-transparent_background_1 = (0, 0, 32, 32)
-transparent_background_2 = (32, 0, 32, 32)
-transparent_background_3 = (64, 0, 32, 32)
-transparent_background_4 = (96, 0, 32, 32)
-transparent_background_5 = (128, 0, 32, 32)
-transparent_background_6 = (160, 0, 32, 32)
-transparent_background_7 = (192, 0, 32, 32)
-transparent_background_8 = (224, 0, 32, 32)
-
-    # Walls
-wall_1 = (0, 32, 32, 32)
-wall_2 = (32, 32, 32, 32)
-wall_3 = (64, 32, 32, 32)
-wall_4 = (96, 32, 32, 32) # cracked wall
-wall_5 = (128, 32, 32, 32)
-wall_6 = (160, 32, 32, 32) # stairs down
-wall_7 = (192, 32, 32, 32) # stairs up
-wall_8 = (224, 32, 32, 32) # pit
-wall_9 = (0, 64, 32, 32)
-wall_10 = (32, 64, 32, 32)
-wall_11 = (64, 64, 32, 32) # brick
-wall_12 = (96, 64, 32, 32) # brick
-wall_13 = (128, 64, 32, 32) # secret room
-wall_14 = (160, 64, 32, 32) # door
-wall_15 = (192, 64, 32, 32) # door
-wall_16 = (224, 64, 32, 32) 
-
-    # Assets
-chest = (0, 128, 32, 32)
-
 # Player Class
 class Player(pygame.sprite.Sprite):
-    def __init__(self, player_class=chest):
+    def __init__(self, player_class=assets.knight):
         super().__init__()
         self.player_class = player_class
         self.surf = self.player_model()
