@@ -1,7 +1,7 @@
 # standard imports
 import pygame
 
-player = pygame.image.load('rouge-like/graphics/fantasy-tileset.png')
+player = pygame.image.load('graphics\\fantasy-tileset.png')
 
 def main():
     pygame.init()
@@ -16,7 +16,7 @@ def main():
             if event.type == pygame.QUIT:
                 running = False
 
-        scree.blit(player, (50,50))
+        screen.blit(player, (50,50))
 
 if __name__ == '__main__':
     main()
