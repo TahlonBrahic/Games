@@ -11,6 +11,12 @@ screen = pygame.display.set_mode((640,480))
 frame_per_second = pygame.time.Clock()
 progression_counter = 1 # counts room progression
 
+# Room Rendering (can't get this out without circular importing)
+def render_room(room):
+    for row in range(len(room)):
+        for column in range(len(room[row])):
+            screen.blit(assets.tileset.subsurface(pygame.Rect(room[row][column])), (column * 32, row * 32)) 
+
 # Player
 player = player.Player()
 
@@ -38,9 +44,10 @@ def main():
         
         # Map Rendering
         if progression_counter == 1:
-            for row in range(len(assets.starting_room)):
-                for column in range(len(assets.starting_room[row])):
-                    screen.blit(assets.tileset.subsurface(pygame.Rect(assets.starting_room[row][column])), (column * 32, row * 32)) 
+            render_room(assets.starting_room)
+
+        if progression_counter > 1: # start random room generation here
+            pass
 
         # Time and Frame 
         pygame.display.update()
