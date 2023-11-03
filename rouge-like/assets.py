@@ -1,3 +1,10 @@
+import pygame
+from pygame.locals import *
+
+# Tileset
+image = 'graphics\\fantasy-tileset.png'
+tileset = pygame.image.load(image)
+
 # Titleset Definitions
 knight = (64, 576, 32, 32)
 mage = (32, 576, 32, 32)
@@ -5,7 +12,7 @@ rouge = (0, 576, 32, 32)
 hunter = (128, 576, 32, 32)
 
     # Transparent Tiles
-transparent_background_1 = (0, 0, 32, 32)
+background_1 = (0, 0, 32, 32)
 transparent_background_2 = (32, 0, 32, 32)
 transparent_background_3 = (64, 0, 32, 32)
 transparent_background_4 = (96, 0, 32, 32)
@@ -37,3 +44,23 @@ chest_closed = (0, 128, 32, 32)
 chest_opened = (32, 128, 32, 32)
 
 # Map Definitions
+
+    # Starting Room (I would like the same starting room regardless of run.)
+
+starting_room = [
+    [wall_1, wall_1, wall_1, wall_1, wall_1, wall_1, wall_1, wall_1, wall_1, wall_1, wall_1, wall_1, wall_1, wall_1, wall_1, wall_1, wall_1, wall_1, wall_1, wall_1],
+    [wall_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, wall_1],
+    [wall_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, wall_1],
+    [wall_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, wall_1],
+    [wall_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, wall_1],
+    [wall_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, wall_1],
+    [wall_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, wall_1],
+    [wall_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, wall_1],
+    [wall_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, wall_1],
+    [wall_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, wall_1],
+    [wall_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, wall_1],
+    [wall_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, wall_1],
+    [wall_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, background_1, wall_1],
+    [wall_1, wall_1, wall_1, wall_1, wall_1, wall_1, wall_1, wall_1, wall_1, wall_1, wall_1, wall_1, wall_1, wall_1, wall_1, wall_1, wall_1, wall_1, wall_1, wall_1]
+]
+
