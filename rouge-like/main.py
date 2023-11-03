@@ -40,9 +40,8 @@ def main():
         if progression_counter == 1:
             for row in range(len(assets.starting_room)):
                 for column in range(len(assets.starting_room[row])):
-                    screen.blit(assets.tileset.subsurface(pygame.Rect(assets.starting_room[row][column])), (row * 32, column * 32)) 
+                    screen.blit(assets.tileset.subsurface(pygame.Rect(assets.starting_room[row][column])), (column * 32, row * 32)) 
 
-        # print(assets.starting_room[0][0])
         # Time and Frame 
         pygame.display.update()
         frame_per_second.tick(60)
