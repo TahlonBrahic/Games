@@ -1,6 +1,6 @@
 import pygame
 from pygame.locals import *
-import assets
+import graphics.assets as assets
 
 # Physics Variables
 vec = pygame.math.Vector2
