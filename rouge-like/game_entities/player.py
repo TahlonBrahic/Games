@@ -49,13 +49,27 @@ class Player(pygame.sprite.Sprite):
         self.pos += self.vel + 0.5 * self.acc
 
         # Entering another room (screen warping) of course there would need to be a door but that can be added later
-        if self.pos.x > 640:
-            self.pos.x = 0
-        if self.pos.x < 0:
-            self.pos.x = 640
-        if self.pos.y > 480:
-            self.pos.y = 0
-        if self.pos.y < 0:
-            self.pos.y = 480
+        # if self.pos.x > 608:
+        #     self.pos.x = 32
+        # if self.pos.x < 0:
+        #     self.pos.x = 608
+        # if self.pos.y > 480:
+        #     self.pos.y = 0
+        # if self.pos.y < 0:
+        #     self.pos.y = 480
+
+        # Bounding for play inside room. I might replace this with the block class
+        if (self.pos.x > 600):
+            self.acc = 0
+            self.pos.x = 600
+        if (self.pos.x < 40):
+            self.acc = 0
+            self.pos.x = 40
+        if (self.pos.y > 450):
+            self.acc = 0
+            self.pos.y = 450
+        if (self.pos.y < 60):
+            self.acc = 0
+            self.pos.y = 60
 
         self.rect.midbottom = self.pos
