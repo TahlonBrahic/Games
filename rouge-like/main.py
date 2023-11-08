@@ -2,7 +2,7 @@
 import pygame
 from pygame.locals import *
 import game_entities.player as player
-import graphics.assets as assets
+import assets.graphics.assets as assets
 
 # Game Initialization
 pygame.init()
