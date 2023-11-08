@@ -2,7 +2,7 @@ import pygame
 from pygame.locals import *
 
 # Tileset
-image = 'graphics\\fantasy-tileset.png'
+image = 'assets\\graphics\\fantasy-tileset.png'
 tileset = pygame.image.load(image)
 
 # Titleset Definitions

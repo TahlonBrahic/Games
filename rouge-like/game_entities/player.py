@@ -1,6 +1,6 @@
 import pygame
 from pygame.locals import *
-import graphics.assets as assets
+import assets.graphics.assets as assets
 
 # Physics Variables
 vec = pygame.math.Vector2
@@ -20,8 +20,7 @@ class Player(pygame.sprite.Sprite):
         self.acc = vec((0,0))
 
     def player_model(self):
-        tileset = pygame.image.load('graphics/fantasy-tileset.png')
-        player_model = tileset.subsurface(pygame.Rect(self.player_class)) # because this is a 32x32 tileset you can scroll over with 8-bit adjustments to the first two parameters, the first is row, the second is column
+        player_model = assets.tileset.subsurface(pygame.Rect(self.player_class)) # because this is a 32x32 tileset you can scroll over with 8-bit adjustments to the first two parameters, the first is row, the second is column
         return player_model
         
     def move(self):
