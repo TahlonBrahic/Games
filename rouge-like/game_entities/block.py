@@ -1,10 +1,13 @@
 import pygame
 from pygame.locals import *
 
+vec = pygame.math.Vector2
+
 class Block(pygame.sprite.Sprite):
-    def __init__(self, tile = 'wall_1'):
+    def __init__(self, tile = 'wall_1', pos):
         super().__init__()
         self.tile = tile
+        self.pos = pos # vec(())
 
     def collision(self, player):
         if pygame.Rect.colliderect(self.rect, player.rect):
