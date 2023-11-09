@@ -10,4 +10,6 @@ class Block(pygame.sprite.Sprite):
         if pygame.Rect.colliderect(self.rect, player.rect):
             player.acc = 0
             # Check which side the collision is on, if X is the collision side make self.pos.x = self.pos.x, likewise for y
-            
+
+    def move(self):
+        return
