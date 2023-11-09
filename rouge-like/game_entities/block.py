@@ -4,7 +4,7 @@ from pygame.locals import *
 vec = pygame.math.Vector2
 
 class Block(pygame.sprite.Sprite):
-    def __init__(self, tile = 'wall_1', pos):
+    def __init__(self, pos, tile = 'wall_1'):
         super().__init__()
         self.tile = tile
         self.pos = pos # vec(())
