@@ -7,7 +7,7 @@ import assets.graphics.assets as assets
 # Game Initialization
 pygame.init()
 pygame.display.set_caption('rouge-like')
-screen = pygame.display.set_mode((640,480))
+screen = pygame.display.set_mode((640,480), pygame.SCALED)
 frame_per_second = pygame.time.Clock()
 progression_counter = 1 # counts room progression
 
@@ -30,7 +30,7 @@ def main():
     # Game Loop
     while running:
         for event in pygame.event.get():
-            if event.type == pygame.QUIT:
+            if event.type == pygame.QUIT or pygame.key.get_pressed()[K_ESCAPE]:
                 running = False
 
         # Clear Screen

@@ -21,3 +21,4 @@ class Block(pygame.sprite.Sprite):
 
     def move(self):
         return
+    # I need logic to check collision side to be able to tell move() where to move the block
