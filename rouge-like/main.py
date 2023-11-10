@@ -8,7 +8,7 @@ import assets.graphics.assets as assets
 pygame.init()
 pygame.display.set_caption('rouge-like')
 screen = pygame.display.set_mode((640,480), pygame.SCALED)
-frame_per_second = pygame.time.Clock()
+clock = pygame.time.Clock()
 progression_counter = 1 # counts room progression
 
 # Room Rendering (can't get this out without circular importing)
@@ -38,7 +38,7 @@ def main():
 
         player.move()
         
-        # Drawing Sprites
+        # Drawing Sprites !Need to render sprites above!
         for sprite in sprites:
             screen.blit(sprite.surf, sprite.rect)
         
@@ -51,7 +51,7 @@ def main():
 
         # Time and Frame 
         pygame.display.update()
-        frame_per_second.tick(60)
+        clock.tick(60)
 
 if __name__ == '__main__':
     main()
