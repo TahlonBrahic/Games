@@ -4,10 +4,11 @@ from pygame.locals import *
 vec = pygame.math.Vector2
 
 class Block(pygame.sprite.Sprite):
-    def __init__(self, pos, tile = 'wall_1'):
+    def __init__(self, pos, image = 'wall_1'):
         super().__init__()
-        self.tile = tile
+        self.image = image
         self.pos = pos # vec(())
+        self.rect = self.image.get_rect()
 
     def collision(self, player):
         if pygame.Rect.colliderect(self.rect, player.rect):
