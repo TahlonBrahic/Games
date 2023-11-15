@@ -9,7 +9,7 @@ import assets.graphics.assets as assets # Why does this work this way
 vec = pygame.math.Vector2
 
 class Block(pygame.sprite.Sprite):
-    def __init__(self, pos = (100, 100), image = assets.wall_1): # assets.tileset.subsurface(pygame.Rect(self.player_class))
+    def __init__(self, pos = (300, 200), image = assets.wall_14): # assets.tileset.subsurface(pygame.Rect(self.player_class))
         super().__init__()
         self.image = image
         self.surf = assets.tileset.subsurface(pygame.Rect(self.image))
@@ -20,3 +20,4 @@ class Block(pygame.sprite.Sprite):
         temp = pygame.key.get_pressed()
         if temp[K_0]:
             self.pos += 1
+
