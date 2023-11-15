@@ -20,3 +20,4 @@ class Block(pygame.sprite.Sprite):
         temp = pygame.key.get_pressed()
         if temp[K_0]:
             self.pos += 1
+
