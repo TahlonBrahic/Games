@@ -10,6 +10,7 @@ pygame.display.set_caption('rouge-like')
 screen = pygame.display.set_mode((640,480), pygame.SCALED)
 clock = pygame.time.Clock()
 progression_counter = 1 # counts room progression
+assets.tileset = assets.tileset.convert() 
 
 # Room Rendering (can't get this out without circular importing)
 def render_room(room):

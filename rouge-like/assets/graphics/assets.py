@@ -3,7 +3,7 @@ from pygame.locals import *
 
 # Tileset
 image = 'assets\\graphics\\fantasy-tileset.png'
-tileset = pygame.image.load(image).convert()
+tileset = pygame.image.load(image)
 
 # Titleset Definitions
 knight = (64, 576, 32, 32)
