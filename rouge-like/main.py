@@ -21,6 +21,7 @@ def render_room(room):
 # Player
 player = player.Player()
 
+
 # Sprites
 sprites = pygame.sprite.Group()
 sprites.add(player)
