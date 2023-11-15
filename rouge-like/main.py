@@ -1,8 +1,8 @@
 # standard imports
 import pygame
 from pygame.locals import *
-import game_entities.player as player
-import assets.graphics.assets as assets
+from game_entities import *
+from assets.graphics.assets import *
 
 # Game Initialization
 pygame.init()
@@ -20,11 +20,12 @@ def render_room(room):
 
 # Player
 player = player.Player()
-
+block = block.Block()
 
 # Sprites
 sprites = pygame.sprite.Group()
 sprites.add(player)
+sprites.add(block)
 
 def main():
     running = True
@@ -39,6 +40,7 @@ def main():
         screen.fill((0,0,0))
 
         player.move()
+        block.move()
         
         # Drawing Sprites !Need to render sprites above!
         for sprite in sprites:
