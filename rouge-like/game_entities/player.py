@@ -4,7 +4,7 @@ from pygame.locals import *
 assets_path = os.path.abspath('C:/Users/Tahlon/Documents/Programming/Games/rouge-like/assets/Graphics')
 sys.path.append(assets_path)
 
-import assets
+import assets.graphics.assets as assets
 
 # Physics Variables
 vec = pygame.math.Vector2
