@@ -9,7 +9,7 @@ import assets.graphics.tileset as assets
 # Physics Variables
 vec = pygame.math.Vector2
 ACC = 0.5
-FRIC = -0.12
+FRIC = -0.20
 
 # Player Class
 class Player(pygame.sprite.Sprite):
@@ -40,24 +40,13 @@ class Player(pygame.sprite.Sprite):
         if pressed_keys[K_s]:
             self.acc.y = ACC
             
-
         # Equation of motion for de-acceleration
         self.acc.x += self.vel.x * FRIC
         self.acc.y += self.vel.y * FRIC
         self.vel += self.acc
         self.pos += self.vel + 0.5 * self.acc
 
-        # Entering another room (screen warping) of course there would need to be a door but that can be added later
-        # if self.pos.x > 608:
-        #     self.pos.x = 32
-        # if self.pos.x < 0:
-        #     self.pos.x = 608
-        # if self.pos.y > 480:
-        #     self.pos.y = 0
-        # if self.pos.y < 0:
-        #     self.pos.y = 480
-
-        # Bounding for play inside room. I might replace this with the block class
+        # Bounding 
         if (self.pos.x > 600):
             self.acc = 0
             self.pos.x = 600

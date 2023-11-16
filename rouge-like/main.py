@@ -19,7 +19,6 @@ def render_room(room):
 # Player
 player = game_entities.player.player.Player()
 block = game_entities.blocks.block.Block()
-another_player = game_entities.player.player.Player()
 
 # Sprites
 sprites = pygame.sprite.LayeredUpdates()
@@ -40,7 +39,7 @@ def main():
         screen.fill((0,0,0))
 
         player.move()
-        block.move()
+        # block.move()
         
         # Drawing Sprites !Need to render sprites above
         for sprite in sprites:
