@@ -1,8 +1,11 @@
 # standard imports
 import pygame
 from pygame.locals import *
-import game_entities.player as player
-import game_entities.block as block
+
+import game_entities
+
+#import game_entities.player as player
+#import game_entities.block as block
 import assets.graphics.assets as assets
 
 # Game Initialization
