@@ -16,7 +16,7 @@ clock = pygame.time.Clock()
 progression_counter = 1 # counts room progression
 assets.tileset = assets.tileset.convert() 
 
-# Room Rendering (can't get this out without circular importing)
+# Room Rendering (can't get this out without circular importing) do I need a room class for generating rooms
 def render_room(room):
     for row in range(len(room)):
         for column in range(len(room[row])):
