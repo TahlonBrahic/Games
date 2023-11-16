@@ -1,9 +1,8 @@
 # standard imports
-import pygame, assets, game_entities
+import pygame, assets, game_entities, time
 from pygame.locals import *
 
 # Game Initialization
-assets.graphics.tileset.tileset
 pygame.init()
 pygame.display.set_caption('rouge-like')
 screen = pygame.display.set_mode((640,480), pygame.SCALED)
@@ -20,11 +19,13 @@ def render_room(room):
 # Player
 player = game_entities.player.player.Player()
 block = game_entities.blocks.block.Block()
+another_player = game_entities.player.player.Player()
 
 # Sprites
-sprites = pygame.sprite.Group()
+sprites = pygame.sprite.LayeredUpdates()
 sprites.add(player)
 sprites.add(block)
+
 
 def main():
     running = True
@@ -41,9 +42,10 @@ def main():
         player.move()
         block.move()
         
-        # Drawing Sprites !Need to render sprites above!
+        # Drawing Sprites !Need to render sprites above
         for sprite in sprites:
             screen.blit(sprite.surf, sprite.rect)
+            
         
         # Map Rendering
         if progression_counter == 1:

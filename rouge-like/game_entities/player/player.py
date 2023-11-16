@@ -16,17 +16,13 @@ class Player(pygame.sprite.Sprite):
     def __init__(self, player_class=assets.knight):
         super().__init__()
         self.player_class = player_class
-        self.surf = self.player_model()
+        self.surf = assets.tileset.subsurface(pygame.Rect(self.player_class))
         self.rect = self.surf.get_rect()
         # Movement variables
         self.pos = vec((320, 240))
         self.vel = vec((0,0))
         self.acc = vec((0,0))
-
-    def player_model(self):
-        player_model = assets.tileset.subsurface(pygame.Rect(self.player_class)) # because this is a 32x32 tileset you can scroll over with 8-bit adjustments to the first two parameters, the first is row, the second is column
-        return player_model
-        
+      
     def move(self):
         # Resets player acceleration to 0
         self.acc = vec((0,0))
