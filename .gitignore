@@ -9,3 +9,8 @@ rouge-like/assets/sounds/__pycache__/__init__.cpython-310.pyc
 rouge-like/assets/sounds/__pycache__/sound_fx.cpython-310.pyc
 rouge-like/game_entities/blocks/__pycache__/__init__.cpython-310.pyc
 rouge-like/game_entities/blocks/__pycache__/block.cpython-310.pyc
+rouge-like/game_entities/enemies/__pycache__/__init__.cpython-310.pyc
+
+rouge-like/game_entities/player/__pycache__/player.cpython-310.pyc
+rouge-like/game_entities/player/__pycache__/__init__.cpython-310.pyc
+rouge-like/game_entities/enemies/__pycache__/enemy.cpython-310.pyc

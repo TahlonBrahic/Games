@@ -1,10 +1,10 @@
 import pygame, sys, os
 from pygame.locals import *
 
-assets_path = os.path.abspath('C:/Users/Tahlon/Documents/Programming/Games/rouge-like/assets/Graphics')
+assets_path = os.path.abspath('C:/Users/Tahlon/Documents/Programming/Games/rouge-like/assets/graphics')
 sys.path.append(assets_path)
 
-import assets.graphics.assets as assets # Why does this work this way
+import assets.graphics.tileset as assets
 
 vec = pygame.math.Vector2
 

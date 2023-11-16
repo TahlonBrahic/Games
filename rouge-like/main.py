@@ -47,7 +47,7 @@ def main():
         
         # Map Rendering
         if progression_counter == 1:
-            render_room(assets.starting_room)
+            render_room(assets.graphics.tileset.starting_room)
 
         if progression_counter > 1: # start random room generation here
             pass
