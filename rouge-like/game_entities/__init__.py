@@ -1,1 +1,1 @@
-from . import block, player
+from . import blocks, player, enemies

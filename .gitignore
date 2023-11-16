@@ -3,3 +3,9 @@ rouge-like/assets/__pycache__/__init__.cpython-310.pyc
 rouge-like/assets/graphics/__pycache__/assets.cpython-310.pyc
 rouge-like/game_entities/__pycache__/__init__.cpython-310.pyc
 rouge-like/assets/graphics/__pycache__/assets.cpython-310.pyc
+rouge-like/assets/graphics/__pycache__/__init__.cpython-310.pyc
+rouge-like/assets/graphics/__pycache__/tileset.cpython-310.pyc
+rouge-like/assets/sounds/__pycache__/__init__.cpython-310.pyc
+rouge-like/assets/sounds/__pycache__/sound_fx.cpython-310.pyc
+rouge-like/game_entities/blocks/__pycache__/__init__.cpython-310.pyc
+rouge-like/game_entities/blocks/__pycache__/block.cpython-310.pyc
